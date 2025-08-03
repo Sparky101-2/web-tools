@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Text Formatter</title>
+  <style>
+    body { font-family: sans-serif; margin: 2em; }
+    textarea { width: 100%; height: 150px; margin-bottom: 1em; }
+    button { margin-right: 0.5em; }
+  </style>
+</head>
+<body>
+
+<h2>Text Formatter</h2>
+<textarea id="inputText" placeholder="Enter your text here..."></textarea><br>
+
+<button onclick="formatText('upper')">UPPER CASE</button>
+<button onclick="formatText('lower')">lower case</button>
+<button onclick="formatText('sentence')">Sentence case</button>
+
+<h3>Formatted Output</h3>
+<textarea id="outputText" readonly></textarea><br>
+<button onclick="copyToClipboard()">📋 Copy to Clipboard</button>
+
+<script>
+function formatText(style) {
+  let text = document.getElementById('inputText').value;
+  if (style === 'upper') {
+    text = text.toUpperCase();
+  } else if (style === 'lower') {
+    text = text.toLowerCase();
+  } else if (style === 'sentence') {
+    text = text.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g, c => c.toUpperCase());
+  }
+  document.getElementById('outputText').value = text;
+}
+
+function copyToClipboard() {
+  const output = document.getElementById('outputText');
+  output.select();
+  document.execCommand('copy');
+  alert("Text copied to clipboard!");
+}
+</script>
+
+</body>
+</html>
