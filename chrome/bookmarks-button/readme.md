@@ -12,7 +12,7 @@ the contents of this directory can be used to add an icon to Google Chrome So th
 git clone https://github.com/Sparky101-2/web-tools.git
     - Or download the ZIP from GitHub and extract it.
 - Open Chrome and go to:
-chrome://extensions
+[chrome://extensions](chrome://extensions)
 - In the top-right corner, enable Developer mode.
 - Click “Load unpacked”.
 - Navigate to:
