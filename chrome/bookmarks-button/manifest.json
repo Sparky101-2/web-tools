@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmarks Button",
+  "version": "1.0",
+  "description": "Adds a toolbar button to open bookmarks.",
+  "action": {
+    "default_title": "Open Bookmarks",
+    "default_icon": {
+      "16": "red_star_png_clip_art_image.png",
+      "32": "red_star_png_clip_art_image.png",
+      "48": "red_star_png_clip_art_image.png",
+      "128": "red_star_png_clip_art_image.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
